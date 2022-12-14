@@ -24,7 +24,9 @@ RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk
     helm init --client-only \
     ######################
     # Install awscli module
+    apk add py3-pip && \
     pip3 install awscli
+
 
 ENV PYTHONPATH "/usr/lib/python3.8/site-packages/"
 
