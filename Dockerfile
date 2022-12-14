@@ -21,7 +21,7 @@ RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk
     chmod +x /usr/bin/helm3 && \
     rm -rf linux-amd64 && \
     # Init version 2 helm:
-    helm init --client-only
+    helm init --client-only \
     ######################
     # Install awscli module
     pip3 install awscli
