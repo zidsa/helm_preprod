@@ -26,7 +26,7 @@ RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk
     ######################
     # Install awscli module
     apk add py3-pip && \
-    pip3 install awscli
+    pip3 install awscli && \
     helm repo update
 
 
