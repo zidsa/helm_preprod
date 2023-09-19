@@ -4,7 +4,7 @@ From python:3.8
 ENV BASE_URL="https://get.helm.sh"
 
 ENV HELM_2_FILE="helm-v2.17.0-linux-amd64.tar.gz"
-ENV HELM_3_FILE="helm-v3.5.0-linux-amd64.tar.gz"
+ENV HELM_3_FILE="helm-v3.11.0-linux-amd64.tar.gz"
 
 
 RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
@@ -26,8 +26,7 @@ RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk
     ######################
     # Install awscli module
     apk add py3-pip && \
-    pip3 install awscli && \
-    helm repo update
+    pip3 install awscli
 
 
 ENV PYTHONPATH "/usr/lib/python3.8/site-packages/"
