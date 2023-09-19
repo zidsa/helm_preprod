@@ -1,4 +1,5 @@
-FROM alpine:3.15
+#FROM alpine:3.15
+From python:3.8
 
 ENV BASE_URL="https://get.helm.sh"
 
@@ -26,6 +27,7 @@ RUN echo "@edge-main http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk
     # Install awscli module
     apk add py3-pip && \
     pip3 install awscli
+    helm repo update
 
 
 ENV PYTHONPATH "/usr/lib/python3.8/site-packages/"
